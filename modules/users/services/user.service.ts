@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 import { errorObject } from "../../../utils/errors.utils";
 import { UserBody, UserModel } from "./../models/user.model";
-/* import config from "../../../config"; */
+import config from "../../../config";
 
 // create user
 export const createUser = async (userData: UserBody) => {
