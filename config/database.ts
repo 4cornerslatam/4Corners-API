@@ -8,10 +8,10 @@ const dataBase = () => {
   mongoose
     .connect(DB_URL || "")
     .then(() => {
-      console.log("Conexión exitosa");
+      console.log("Successful connection");
     })
     .catch((error) => {
-      console.log("Error de conexión con la base de datos");
+      console.log("Database connection failed");
       console.log(error);
       process.exit(1);
     });

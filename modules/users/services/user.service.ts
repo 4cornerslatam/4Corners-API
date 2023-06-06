@@ -15,7 +15,7 @@ export const createUser = async (userData: UserBody) => {
   // check if user already exist
   const oldUser = await UserModel.findOne({ email });
   if (oldUser) {
-    throw errorObject(409, "User already exist. Please login");
+    throw errorObject(409, "User already exist");
   }
 
   // create user in db
@@ -26,5 +26,5 @@ export const createUser = async (userData: UserBody) => {
 
   //return new user
   user.save();
-  return user;
+  return "Successfully registration";
 };
