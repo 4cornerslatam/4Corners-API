@@ -6,6 +6,8 @@ import cors from "cors";
 import helmet from "helmet";
 import routerApi from "./router";
 import dataBase from "./config/database";
+import dotenv from "dotenv";
+dotenv.config();
 
 /**
  * App Variables

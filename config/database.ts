@@ -5,6 +5,7 @@ import mongoose from "mongoose";
 const { DB_URL } = process.env;
 
 const dataBase = () => {
+  mongoose.set("strictQuery", false);
   mongoose
     .connect(DB_URL || "")
     .then(() => {
